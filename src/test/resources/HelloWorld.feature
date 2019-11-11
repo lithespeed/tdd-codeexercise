@@ -1,7 +1,7 @@
 @hello
-Feature: Outside-in development demonstration
+Feature: As a user, I want to be greeted, so that I can start my day
 
-Scenario: Hello World
-Given I want to display Hello World
+Scenario: Program returns Hello World
+Given I want to be greeted
 When I execute the application
-Then I should see the message
+Then I should see the default message

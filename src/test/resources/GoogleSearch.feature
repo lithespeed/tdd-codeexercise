@@ -1,4 +1,3 @@
-@search
 Feature: Google Search Feature
 In order to ensure that Google Search works
 I want to run a quick Hello World search.

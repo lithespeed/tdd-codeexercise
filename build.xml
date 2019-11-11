@@ -9,6 +9,9 @@
     <property name="cucumber-jvm.version" value="1.0.8"/>
     <property name="jars" value="${lib.dir}"/>
 
+    <taskdef name="jstest" classname="com.philmander.jstest.ant.JsTestRunnerTask"
+             classpath="${lib.dir}/ant-jstestrunner-0.1-deps.jar" />
+
     <path id="junit.classpath">
         <pathelement location="${lib.dir}/junit-4.10.jar"/>
     </path>
@@ -64,7 +67,6 @@
     </target>
 
     <target name="create" depends="clean">
-        <echo message="JAVA_HOME=${jdk.home}"/>
         <mkdir dir="${output}"/>
         <mkdir dir="${output}/src/main"/>
         <mkdir dir="${output}/src/test"/>
@@ -133,5 +135,9 @@
                 </not>
             </condition>
         </fail>
+    </target>
+
+    <target name="runJsTests">
+        <jstest dir="${src}/test" includes="**/*.html" phantomWin="${lib.dir}/phantom/phantomjs.exe" />
     </target>
 </project>

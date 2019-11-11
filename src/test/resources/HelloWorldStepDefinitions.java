@@ -1,42 +1,35 @@
 package test.resources;
 
+
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
-import main.HelloWorld;
-
-
-import static org.junit.Assert.assertEquals;
-
-
-/**
- * Created with IntelliJ IDEA.
- * User: Raj
- * Date: 3/7/13
- * Time: 6:00 AM
- * To change this template use File | Settings | File Templates.
- */
+import main.com.HelloWorld;
+import org.junit.Assert;
 
 public class HelloWorldStepDefinitions {
 
-    HelloWorld helloWorld;
+
+
+    HelloWorld testSubject;
     String message;
 
-    @Given("^I want to display Hello World$")
-    public void I_want_to_display_Hello_World() throws Throwable {
-        // Express the Regexp above with the code you wish you had
+    @Given("^I want to be greeted$")
+    public void I_want_to_be_greeted() throws Throwable {
+        testSubject = new HelloWorld("");
+
     }
 
     @When("^I execute the application$")
     public void I_execute_the_application() throws Throwable {
-        // Express the Regexp above with the code you wish you had
-        helloWorld = new HelloWorld();
-        message = helloWorld.getMessage();
+
+        message = testSubject.sayHello();
     }
 
-    @Then("^I should see the message$")
-    public void I_should_the_message() throws Throwable {
-        // Express the Regexp above with the code you wish you had
-        assertEquals("Hello World", message);
+    @Then("^I should see the default message$")
+    public void I_should_see_the_default_message() throws Throwable {
+        Assert.assertEquals("Hello World", message);
     }
+
+
 }
