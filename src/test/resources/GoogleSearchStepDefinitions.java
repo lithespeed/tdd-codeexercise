@@ -14,13 +14,6 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Raj
- * Date: 4/2/13
- * Time: 3:16 PM
- * To change this template use File | Settings | File Templates.
- */
 public class GoogleSearchStepDefinitions {
 
 

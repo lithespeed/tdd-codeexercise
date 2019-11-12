@@ -1,12 +1,5 @@
 package main.com;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Raj
- * Date: 6/23/14
- * Time: 3:38 PM
- * To change this template use File | Settings | File Templates.
- */
 public class HelloWorld {
 
     String name;

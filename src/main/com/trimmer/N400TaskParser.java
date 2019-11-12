@@ -5,9 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * Created by raj_indugula on 12/5/16.
- */
 public class N400TaskParser {
 
     public ArrayList<String> parse(String filePath) throws IOException {
