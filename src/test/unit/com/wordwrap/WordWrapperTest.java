@@ -8,30 +8,24 @@ public class WordWrapperTest {
 
     @Test
     public void itDoesNotWrap() {
-
         // arrange
         WordWrapper testSubject = new WordWrapper();
         String input = "Hello Raj!";
         int rowLength = 20;
-
         // act
         String output = testSubject.wrap(input, rowLength);
-
         // assert
         Assert.assertEquals("Hello Raj!", output);
     }
 
     @Test
     public void itWrapsOnce() {
-
         // arrange
         WordWrapper testSubject = new WordWrapper();
         String input = "Hello";
         int rowLength = 3;
-
         // act
         String output = testSubject.wrap(input, rowLength);
-
         // assert
         Assert.assertEquals("Hel\nlo", output);
     }

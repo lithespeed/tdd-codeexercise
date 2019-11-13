@@ -16,21 +16,17 @@ public class Selenium2Example {
 
     @Before
     public void specifyChromeDriver() {
-
-        //System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
     }
-
 
     @Test
     public void itSearchesForXPAndFindsKentBeck() throws Exception {
-
         // Arrange
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.wikipedia.org");
 
         WebElement searchBox = driver.findElement(By.id("searchInput"));
-
-
         // Act
         searchBox.sendKeys("extreme programming");
         searchBox.submit();

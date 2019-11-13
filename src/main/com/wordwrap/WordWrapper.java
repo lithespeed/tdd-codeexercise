@@ -1,6 +1,7 @@
 package main.com.wordwrap;
 
 public class WordWrapper {
+    //tested
     public String wrap(String input, int rowLength) {
         if(input.length() > rowLength) {
             return input.substring(0, rowLength) + "\n" + wrap(input.substring(rowLength, input.length()), rowLength);

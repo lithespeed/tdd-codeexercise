@@ -4,34 +4,24 @@ import java.util.HashSet;
 
 public class StringSet {
 
-    HashSet set = new HashSet<String>();
+    HashSet<String> set = new HashSet<String>();
 
+    //tested
     public void add(String s) {
         set.add(s);
     }
 
+    //tested
     public int size() {
-        return set.size();  //To change body of created methods use File | Settings | File Templates.
+        return set.size();
     }
 
-    public boolean contains(String s) {
-        return set.contains(s);  //To change body of created methods use File | Settings | File Templates.
-    }
-
+    //tested
     public void remove(String s) throws Exception {
-
         if (set.contains(s)) {
             set.remove(s);
         } else {
             throw new Exception();
-        }
-    }
-
-
-    public void print() {
-
-        for (Object o : set) {
-            System.out.println((String)o);
         }
     }
 }
