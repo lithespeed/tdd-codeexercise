@@ -1,8 +1,8 @@
 package test.unit.com.wordwrap;
 
 import main.com.wordwrap.WordWrapper;
-import org.junit.Test;
 import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 
 public class WordWrapperTest {
 

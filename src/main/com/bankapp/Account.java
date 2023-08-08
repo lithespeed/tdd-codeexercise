@@ -30,7 +30,7 @@ public class Account {
         this.accountDao = accountDao;
     }
 
-    private AccountDao accountDao = new AccountDao();
+    public AccountDao accountDao = new AccountDao();
 
     private RateEngine rateEngine = new RateEngine();
 
@@ -129,4 +129,7 @@ public class Account {
     public void setEmailService(EmailService emailService) {
         this.emailService = emailService;
     }
+
+
+
 }
